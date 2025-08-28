@@ -27,6 +27,7 @@ namespace PolyTrade_WebApp
 
             textBox2.Text = "$" + total.ToString();
 
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
