@@ -9,7 +9,17 @@ namespace PolyTrade_WebApp
     public class cart_item
     {
         public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string Notes { get; set; }   // e.g., "Size: M"
+        public int Price { get; set; }
+
+        public cart_item(string name, int price)
+        {
+            Name = name;
+            Price = price;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} - ${Price}";
+        }
     }
 }
