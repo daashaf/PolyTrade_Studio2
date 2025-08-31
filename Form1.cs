@@ -21,7 +21,7 @@ namespace PolyTrade_WebApp
             InitializeComponent();
             cart = new cart();
 
-            // Add some default items
+            // Add some  items
             cart.AddItem(new cart_item("T-shirt", 10));
             cart.AddItem(new cart_item("Charger", 6));
             cart.AddItem(new cart_item("Fries", 3));
