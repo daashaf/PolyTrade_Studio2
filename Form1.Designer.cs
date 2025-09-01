@@ -37,7 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Total = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -108,13 +107,13 @@
             this.panel2.BackColor = System.Drawing.Color.SandyBrown;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.listBox1);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.Total);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Location = new System.Drawing.Point(574, 139);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(364, 409);
             this.panel2.TabIndex = 11;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button1
             // 
@@ -139,15 +138,6 @@
             this.listBox1.Size = new System.Drawing.Size(278, 190);
             this.listBox1.TabIndex = 12;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel3.ForeColor = System.Drawing.Color.Lavender;
-            this.panel3.Location = new System.Drawing.Point(45, 272);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(279, 10);
-            this.panel3.TabIndex = 11;
-            // 
             // Total
             // 
             this.Total.AutoSize = true;
@@ -161,9 +151,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 239);
+            this.pictureBox1.Location = new System.Drawing.Point(189, 222);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 228);
+            this.pictureBox1.Size = new System.Drawing.Size(302, 263);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -250,7 +240,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Total;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Button button5;

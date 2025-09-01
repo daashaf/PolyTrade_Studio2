@@ -14,11 +14,13 @@ namespace PolyTrade_WebApp
 {
     public partial class Form1 : Form
     {
+         Graphics Graphics;
         private cart cart;
 
         public Form1()
         {
             InitializeComponent();
+            Graphics = CreateGraphics();
             cart = new cart();
 
             // Add some  items
@@ -116,6 +118,16 @@ namespace PolyTrade_WebApp
                     "No Items Selected",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            using (Pen pen = new Pen(Color.MidnightBlue, 2)) // Blue line, 3px thick
+            {
+                // Draw a horizontal line across the panel
+                int y = 280; // Adjust this to match where your blue line is
+                e.Graphics.DrawLine(pen, 10, y, panel2.Width - 10, y);
             }
         }
     }
