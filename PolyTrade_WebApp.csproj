@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clothing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clothing.Designer.cs">
+      <DependentUpon>Clothing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="footwear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="footwear.Designer.cs">
+      <DependentUpon>footwear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="snacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snacks.Designer.cs">
+      <DependentUpon>snacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationary.Designer.cs">
+      <DependentUpon>Stationary.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Clothing.resx">
+      <DependentUpon>Clothing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="footwear.resx">
+      <DependentUpon>footwear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,7 +113,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="snacks.resx">
+      <DependentUpon>snacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationary.resx">
+      <DependentUpon>Stationary.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +133,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PROFILE_ICON-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOG_OUT_ICON-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CroppedHoodie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CroppedHoodie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CamoBaggy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Greengraphic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-removebg-preview11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\futuristicHeels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\womensSneakers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenNewBalance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cookies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muffin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icecream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hersheys.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
