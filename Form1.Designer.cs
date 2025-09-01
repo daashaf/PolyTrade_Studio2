@@ -220,9 +220,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(665, 5);
+            this.pictureBox1.Image = global::PolyTrade_WebApp.Properties.Resources._431d5052_3e89_4ee4_a499_377843fdc7bd;
+            this.pictureBox1.Location = new System.Drawing.Point(640, -14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 

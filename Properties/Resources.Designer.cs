@@ -93,6 +93,16 @@ namespace PolyTrade_WebApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _431d5052_3e89_4ee4_a499_377843fdc7bd {
+            get {
+                object obj = ResourceManager.GetObject("431d5052-3e89-4ee4-a499-377843fdc7bd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backbutton {
             get {
                 object obj = ResourceManager.GetObject("backbutton", resourceCulture);
