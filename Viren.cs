@@ -12,12 +12,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PolyTrade_WebApp
 {
-    public partial class Form1 : Form
+    public partial class Viren : Form
     {
          Graphics Graphics;
         private cart cart;
 
-        public Form1()
+        public Viren()
         {
             InitializeComponent();
             Graphics = CreateGraphics();
