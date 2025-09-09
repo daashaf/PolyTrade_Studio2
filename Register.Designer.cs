@@ -1,6 +1,6 @@
 ﻿namespace PolyTrade_WebApp
 {
-    partial class Form2
+    partial class Register
     {
         /// <summary>
         /// Required designer variable.

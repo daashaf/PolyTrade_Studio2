@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace PolyTrade_WebApp
 {
-    public partial class Form2 : Form
+    public partial class Register : Form
     {
         // Path to existing text file
         string filePath = @"C:\Users\vrajp\source\repos\PolyTrade_WebApp\RegisterData.txt";
-        public Form2()
+        public Register()
         {
             InitializeComponent();
         }
