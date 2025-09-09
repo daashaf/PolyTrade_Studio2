@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PolyTrade_WebApp
 {
-    public partial class Form1 : Form
+    public partial class Dashbaord : Form
     {
-        public Form1()
+        public Dashbaord()
         {
             InitializeComponent();
         }

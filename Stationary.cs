@@ -44,7 +44,7 @@ namespace PolyTrade_WebApp
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form1 dashboard = new Form1();
+            Dashbaord dashboard = new Dashbaord();
             dashboard.Show();
         }
     }

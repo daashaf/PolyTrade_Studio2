@@ -26,7 +26,7 @@ namespace PolyTrade_WebApp
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form1 back = new Form1();
+            Dashbaord back = new Dashbaord();
             back.Show();
 
         }
