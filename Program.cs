@@ -16,7 +16,7 @@ namespace PolyTrade_WebApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Viren());
+            Application.Run(new Dashbaord());
         }
     }
 }
