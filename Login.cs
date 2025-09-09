@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace PolyTrade_WebApp
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         private StoreData store;
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             store = new StoreData();   // initialize it here
