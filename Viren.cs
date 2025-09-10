@@ -24,10 +24,11 @@ namespace PolyTrade_WebApp
             cart = new cart();
 
             // Add some  items
-            cart.AddItem(new cart_item("T-shirt", 10));
+            cart.AddItem(new cart_item("T-shirt", 10)); 
             cart.AddItem(new cart_item("Charger", 6));
             cart.AddItem(new cart_item("Fries", 3));
             cart.AddItem(new cart_item("Book", 2));
+            cart.AddItem(new cart_item("Pencil", 6));
 
             UpdateUI();
 

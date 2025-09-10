@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cart.cs" />
+    <Compile Include="cart_item.cs" />
     <Compile Include="Clothing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +105,12 @@
       <DependentUpon>Stationary.cs</DependentUpon>
     </Compile>
     <Compile Include="StoreData.cs" />
+    <Compile Include="Viren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viren.Designer.cs">
+      <DependentUpon>Viren.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Clothing.resx">
       <DependentUpon>Clothing.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stationary.resx">
       <DependentUpon>Stationary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viren.resx">
+      <DependentUpon>Viren.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
