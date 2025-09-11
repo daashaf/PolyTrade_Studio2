@@ -29,6 +29,7 @@ namespace PolyTrade_WebApp
             cart.AddItem(new cart_item("Fries", 3));
             cart.AddItem(new cart_item("Book", 2));
             cart.AddItem(new cart_item("Pencil", 6));
+            cart.AddItem(new cart_item("Eraser", 6));
 
             UpdateUI();
 
