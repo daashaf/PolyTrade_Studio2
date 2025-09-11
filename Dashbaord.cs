@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PolyTrade_WebApp
@@ -17,32 +10,34 @@ namespace PolyTrade_WebApp
             InitializeComponent();
         }
 
+        // Category buttons
         private void button1_Click(object sender, EventArgs e)
         {
-            Clothing category1 = new Clothing();
-            category1.Show();
-        }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Logged out successfully", "Log Out", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Clothing section coming soon!", "PolyTrade");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Stationary category2 = new Stationary();
-            category2.Show();
+            MessageBox.Show("Stationary section coming soon!", "PolyTrade");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            footwear category3 = new footwear();
-            category3.Show();  
+            MessageBox.Show("Footwear section coming soon!", "PolyTrade");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            snacks category4 = new snacks();
-            category4.Show();   
+            MessageBox.Show("Snacks section coming soon!", "PolyTrade");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Logout → back to Login form
+            MessageBox.Show("Logged out successfully", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

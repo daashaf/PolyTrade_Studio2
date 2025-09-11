@@ -1,36 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace PolyTrade_WebApp
 {
-    internal class StoreData
+    public class StoreData
     {
-        private readonly string filePath = @"D:\Studio2\userData.txt";
+        private string filePath = @"C:\Users\daash\OneDrive - Otago Polytechnic\Studio2\Sprint1\PolyTrade_Studio2\RegisterData.txt";
 
-        public bool ValidateUser(string username, string password)
+        public bool ValidateUser(string Username, string Password)
         {
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-                return false;
-
             if (!File.Exists(filePath))
                 return false;
 
-            var lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(filePath);
 
-            return lines.Any(line =>
+            foreach (string line in lines)
             {
-                var parts = line.Split(',');
-                return parts.Length == 2 &&
-                       parts[0].Trim().Equals(username, StringComparison.OrdinalIgnoreCase) &&
-                       parts[1].Trim().Equals(password);
-            });
+                string[] parts = line.Split('|'); // username|password|fullname|studentid|email
+                if (parts.Length >= 2)
+                {
+                    string savedUsername = parts[0].Trim();
+                    string savedPassword = parts[1].Trim();
+
+                    if (savedUsername.Equals(Username, StringComparison.OrdinalIgnoreCase) &&
+                        savedPassword == Password)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
     }
 }
-
-
-
