@@ -12,7 +12,7 @@ namespace PolyTrade_WebApp
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Start with Login form
-            Application.Run(new Login());
+            Application.Run(new Dashbaord());
         }
     }
 }

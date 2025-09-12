@@ -47,5 +47,11 @@ namespace PolyTrade_WebApp
             Dashbaord dashboard = new Dashbaord();
             dashboard.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Viren cart = new Viren();
+            cart.Show();
+        }
     }
 }
