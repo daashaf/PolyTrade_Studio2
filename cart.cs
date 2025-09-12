@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 namespace PolyTrade_WebApp
 {
@@ -36,7 +33,11 @@ namespace PolyTrade_WebApp
             return items;
         }
 
-        public int GetTotal()
+        /// <summary>
+        /// Calculates the total cost of items in the cart.
+        /// Uses decimal instead of int (for cents support).
+        /// </summary>
+        public decimal GetTotal()
         {
             return items.Sum(i => i.Price);
         }

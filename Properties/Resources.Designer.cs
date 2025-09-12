@@ -293,6 +293,16 @@ namespace PolyTrade_WebApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Reg {
+            get {
+                object obj = ResourceManager.GetObject("Reg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap womensSneakers {
             get {
                 object obj = ResourceManager.GetObject("womensSneakers", resourceCulture);
