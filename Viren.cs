@@ -8,7 +8,7 @@ namespace PolyTrade_WebApp
     public partial class Viren : Form
     {
         private cart cart;
-        private readonly string filePath = @"C:\Users\viren\OneDrive\Documents\dashboard.txt";
+        private readonly string filePath = @"C:\Users\daash\Downloads\dashboard.txt";  // ✅ updated path
 
         public Viren()
         {
@@ -42,8 +42,12 @@ namespace PolyTrade_WebApp
             }
             else
             {
-                MessageBox.Show("Item file not found:\n" + filePath,
-                    "File Missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Windows.Forms.MessageBox.Show(
+                    "Item file not found:\n" + filePath,
+                    "File Missing",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
 
@@ -69,19 +73,24 @@ namespace PolyTrade_WebApp
             }
             else
             {
-                MessageBox.Show("Please select an item to remove.", "No Selection",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                System.Windows.Forms.MessageBox.Show(
+                    "Please select an item to remove.",
+                    "No Selection",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
             }
         }
 
         // 🔹 Clear all items
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
+            DialogResult result = System.Windows.Forms.MessageBox.Show(
                 "Are you sure you want to remove all items?",
                 "Confirm Remove",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
+                MessageBoxIcon.Warning
+            );
 
             if (result == DialogResult.Yes)
             {
@@ -90,22 +99,29 @@ namespace PolyTrade_WebApp
             }
         }
 
-        // 🔹 Checkout
-        private void button1_Click(object sender, EventArgs e)
+        // 🔹 Checkout → open Checkout form
+        private void Cart_Click(object sender, EventArgs e)
         {
             if (cart.GetItems().Count > 0)
             {
-                MessageBox.Show("Your order has been confirmed!", "Order Confirmed",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cart.Clear();
-                UpdateUI();
+                // Pass the cart items to Checkout
+                Checkout checkoutForm = new Checkout(cart.GetItems());
+                checkoutForm.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Please select items before checkout.", "No Items Selected",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                System.Windows.Forms.MessageBox.Show(
+                    "Please select items before checkout.",
+                    "No Items Selected",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
             }
         }
+
+
+
 
         // 🔹 Draw blue separator line
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -113,13 +129,8 @@ namespace PolyTrade_WebApp
             using (Pen pen = new Pen(Color.MidnightBlue, 2))
             {
                 int y = 280;
-                e.Graphics.DrawLine(pen, 10, y, panel2.Width - 10, y);
+                e.Graphics.DrawLine(pen, 10, y, panel1.Width - 10, y);
             }
-        }
-
-        private void Viren_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

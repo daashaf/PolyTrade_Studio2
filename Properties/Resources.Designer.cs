@@ -73,6 +73,16 @@ namespace PolyTrade_WebApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2361d035_83b2_4cf2_9ce0_4196b063b03b {
+            get {
+                object obj = ResourceManager.GetObject("_2361d035_83b2_4cf2_9ce0_4196b063b03b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("3", resourceCulture);
@@ -256,6 +266,16 @@ namespace PolyTrade_WebApp.Properties {
         internal static System.Drawing.Bitmap LOG_OUT_ICON_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("LOG_OUT_ICON-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MessageBox {
+            get {
+                object obj = ResourceManager.GetObject("MessageBox", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
