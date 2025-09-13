@@ -1,125 +1,101 @@
 ﻿using System;
-using System.Drawing;
-using System.IO;
+using System.IO; // added for file reading/writing
+using System.Linq; // added for summing prices
 using System.Windows.Forms;
 
 namespace PolyTrade_WebApp
 {
     public partial class Viren : Form
     {
-        private cart cart;
-        private readonly string filePath = @"C:\Users\viren\OneDrive\Documents\dashboard.txt";
+        // 🔹 file path for the cart
+        readonly string cartPath = Path.Combine(Application.StartupPath, "cart.txt");
 
         public Viren()
         {
             InitializeComponent();
-            cart = new cart();
-
-            LoadItemsFromFile();   // ✅ Load items from dashboard.txt
-            UpdateUI();
+            this.Load += Viren_Load; // make sure load event runs
         }
 
-        // 🔹 Load items from text file
-        private void LoadItemsFromFile()
+        // 🔹 Load items into listBox1 from text file + update total
+        private void Viren_Load(object sender, EventArgs e)
         {
-            if (File.Exists(filePath))
+            listBox1.Items.Clear();
+            decimal total = 0;
+
+            if (File.Exists(cartPath))
             {
-                string[] lines = File.ReadAllLines(filePath);
+                var lines = File.ReadAllLines(cartPath);
+                listBox1.Items.AddRange(lines);
 
-                foreach (string line in lines)
+                // calculate total based on prices in lines
+                foreach (var line in lines)
                 {
-                    // Skip empty lines or category headers (starting with #)
-                    if (string.IsNullOrWhiteSpace(line) || line.StartsWith("#"))
-                        continue;
-
-                    string[] parts = line.Split(',');
-
-                    if (parts.Length == 2 && decimal.TryParse(parts[1], out decimal price))
+                    // expects format like "Mens Hoodie | $20"
+                    var parts = line.Split('$');
+                    if (parts.Length > 1 && decimal.TryParse(parts[1], out decimal price))
                     {
-                        cart.AddItem(new cart_item(parts[0].Trim(), price));
+                        total += price;
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("Item file not found:\n" + filePath,
-                    "File Missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            textBox2.Text = total.ToString("C"); // show as currency
         }
 
-        // 🔹 Refresh UI
-        private void UpdateUI()
-        {
-            listBox1.Items.Clear();
-
-            foreach (var item in cart.GetItems())
-                listBox1.Items.Add(item.ToString());
-
-            textBox2.Text = "$" + cart.GetTotal().ToString("0.00");
-        }
-
-        // 🔹 Remove selected item
-        private void buttonRemove_Click(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedIndex >= 0)
-            {
-                var selected = cart.GetItems()[listBox1.SelectedIndex];
-                cart.RemoveItem(selected);
-                UpdateUI();
-            }
-            else
-            {
-                MessageBox.Show("Please select an item to remove.", "No Selection",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        // 🔹 Clear all items
-        private void button3_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-                "Are you sure you want to remove all items?",
-                "Confirm Remove",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                cart.Clear();
-                UpdateUI();
-            }
-        }
-
-        // 🔹 Checkout
+        // 🔹 Checkout button (button1)
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cart.GetItems().Count > 0)
+            if (listBox1.Items.Count == 0)
             {
-                MessageBox.Show("Your order has been confirmed!", "Order Confirmed",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cart.Clear();
-                UpdateUI();
+                MessageBox.Show("Your cart is empty!", "Checkout", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MessageBox.Show("Checkout successful! Thank you for your order.",
+                "Checkout", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // clear after checkout
+            File.WriteAllText(cartPath, string.Empty);
+            listBox1.Items.Clear();
+            textBox2.Text = "$0.00";
+        }
+
+        // 🔹 Remove Order button (button3)
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                // remove selected item from ListBox
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+
+                // update file with remaining items
+                using (StreamWriter sw = new StreamWriter(cartPath, false))
+                {
+                    foreach (var item in listBox1.Items)
+                    {
+                        sw.WriteLine(item.ToString());
+                    }
+                }
+
+                // recalculate total
+                decimal total = 0;
+                foreach (var item in listBox1.Items)
+                {
+                    var parts = item.ToString().Split('$');
+                    if (parts.Length > 1 && decimal.TryParse(parts[1], out decimal price))
+                    {
+                        total += price;
+                    }
+                }
+
+                textBox2.Text = total.ToString("C");
+
+                MessageBox.Show("Item removed from cart.", "Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Please select items before checkout.", "No Items Selected",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select an item to remove.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        // 🔹 Draw blue separator line
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            using (Pen pen = new Pen(Color.MidnightBlue, 2))
-            {
-                int y = 280;
-                e.Graphics.DrawLine(pen, 10, y, panel2.Width - 10, y);
-            }
-        }
-
-        private void Viren_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

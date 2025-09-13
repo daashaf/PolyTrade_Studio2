@@ -1,51 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PolyTrade_WebApp
 {
     public partial class footwear : Form
     {
+        readonly string cartPath = Path.Combine(Application.StartupPath, "cart.txt");
         public footwear()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void SaveItemToFile(string item)
         {
-            MessageBox.Show("Successfully added to cart!", "Add To Cart", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            using (StreamWriter sw = new StreamWriter(cartPath, true))
+                sw.WriteLine(item);
+
+            MessageBox.Show(item + " has been added to your cart!",
+                "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Successfully added to cart!", "Add To Cart", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
+        private void button1_Click(object sender, EventArgs e) { SaveItemToFile("Air Jordans | $80"); }
+        private void button2_Click(object sender, EventArgs e) { SaveItemToFile("Women Heels | $40"); }
+        private void button3_Click(object sender, EventArgs e) { SaveItemToFile("Women Shoes | $50"); }
+        private void button4_Click(object sender, EventArgs e) { SaveItemToFile("New Balances | $90"); }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Successfully added to cart!", "Add To Cart", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Successfully added to cart!", "Add To Cart", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Successfully logged out", "Log Out", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Dashbaord dashboard = new Dashbaord();
-            dashboard.Show();
-        }
+        private void button5_Click(object sender, EventArgs e) { new Viren().Show(); this.Hide(); }
+        private void button7_Click(object sender, EventArgs e) { new Dashbaord().Show(); this.Hide(); }
     }
 }
