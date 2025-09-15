@@ -12,33 +12,24 @@ using System.Windows.Forms;
 
 namespace PolyTrade_WebApp
 {
-    public partial class Form2 : Form
+    public partial class Register : Form
     {
-        // Path to existing text file
-        string filePath = @"C:\Users\vrajp\source\repos\PolyTrade_WebApp\RegisterData.txt";
-        public Form2()
+        public Register()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            // Form load logic (if needed)
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -51,14 +42,13 @@ namespace PolyTrade_WebApp
             string password = textBox5.Text.Trim();
             string confirmPassword = textBox6.Text.Trim();
 
-            // === Validate required fields ===
-            if (string.IsNullOrEmpty(fullName))
+            // Username validation
+            if (string.IsNullOrEmpty(username))
             {
-                MessageBox.Show("Full Name is required!", "Missing Field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox1.Focus();
+                MessageBox.Show("Username is required!", "Missing Field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox2.Focus();
                 return;
             }
-            // No space on username
             if (username.Contains(" "))
             {
                 MessageBox.Show("Username cannot contain spaces!", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -66,6 +56,7 @@ namespace PolyTrade_WebApp
                 return;
             }
 
+            // Student ID validation
             if (!Regex.IsMatch(studentId, @"^[0-9]+$"))
             {
                 MessageBox.Show("Student ID must contain only numbers!", "Invalid Student ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,14 +64,15 @@ namespace PolyTrade_WebApp
                 return;
             }
 
-            // === Email Validation: Must end with @gmail.com or @microsoft.com ===
+            // Email validation
             if (!Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@(gmail|microsoft)\.com$"))
             {
-                MessageBox.Show("Email must be have @gmail.com!", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Email must end with @gmail.com or @microsoft.com", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox4.Focus();
                 return;
             }
-           
+
+            // Password validation
             if (string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Password is required!", "Missing Field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -95,7 +87,6 @@ namespace PolyTrade_WebApp
                 return;
             }
 
-            // Check if password and confirm password match
             if (password != confirmPassword)
             {
                 MessageBox.Show("Passwords do not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -107,32 +98,14 @@ namespace PolyTrade_WebApp
 
             try
             {
-                // === Save the data using StreamWriter ===
-                using (StreamWriter writer = new StreamWriter(filePath, true)) // true = append mode
+                // Example: Save registration data to a file
+                string filePath = "RegisterData.txt";
+                using (StreamWriter sw = new StreamWriter(filePath, true))
                 {
-                    writer.WriteLine("Full Name: " + fullName);
-                    writer.WriteLine("Username: " + username);
-                    writer.WriteLine("Student ID: " + studentId);
-                    writer.WriteLine("Email ID: " + email);
-                    writer.WriteLine("Password: " + password);
-                    writer.WriteLine("--------------------------------------");
+                    sw.WriteLine($"{fullName},{username},{studentId},{email},{password}");
                 }
 
-                // === Read the file back to confirm ===
-                using (StreamReader reader = new StreamReader(filePath))
-                {
-                    Console.WriteLine(reader.ReadToEnd()); // Optional, just for checking in debug console
-                }
-                // Show success message
-                MessageBox.Show("Registration successful! Data saved to file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Clear all fields after successful registration
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
-                textBox4.Clear();
-                textBox5.Clear();
-                textBox6.Clear();
+                MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -140,54 +113,14 @@ namespace PolyTrade_WebApp
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        private void button2_Click(object sender, EventArgs e) { }
+        private void button3_Click(object sender, EventArgs e) { }
+        private void button7_Click(object sender, EventArgs e) { }
+        private void button4_Click(object sender, EventArgs e) { }
+        private void button5_Click(object sender, EventArgs e) { }
+        private void textBox3_TextChanged(object sender, EventArgs e) { }
+        private void label9_Click(object sender, EventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
     }
 }

@@ -72,6 +72,27 @@
     <Compile Include="Dashbaord.Designer.cs">
       <DependentUpon>Dashbaord.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+>>>>>>> origin/Sprint2_Daasha
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +132,7 @@
     <Compile Include="Viren.Designer.cs">
       <DependentUpon>Viren.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +145,8 @@
     <EmbeddedResource Include="Dashbaord.resx">
       <DependentUpon>Dashbaord.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> origin/Sprint2_Daasha
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,82 +189,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PROFILE_ICON-removebg-preview.png" />
+    <None Include="Resources\431d5052-3e89-4ee4-a499-377843fdc7bd-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LOG_OUT_ICON-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CroppedHoodie1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CroppedHoodie.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CamoBaggy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Greengraphic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Jeans.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cart-removebg-preview1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cart-removebg-preview11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backbutton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pens.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\books.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calculator.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bag.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\jordan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\futuristicHeels.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\womensSneakers.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\greenNewBalance.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cookies.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\muffin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icecream.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hersheys.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\431d5052-3e89-4ee4-a499-377843fdc7bd.png" />
+    <None Include="Resources\4914210-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\6904a3d0-5543-4c3b-bd6c-8aa126789849.jpg" />
