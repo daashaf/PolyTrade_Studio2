@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -45,114 +45,71 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+
   <ItemGroup>
+    <!-- Cart -->
     <Compile Include="cart.cs" />
     <Compile Include="cart_item.cs" />
-    <Compile Include="Checkout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Checkout.Designer.cs">
-      <DependentUpon>Checkout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Clothing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Clothing.Designer.cs">
-      <DependentUpon>Clothing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="footwear.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="footwear.Designer.cs">
-      <DependentUpon>footwear.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dashbaord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashbaord.Designer.cs">
-      <DependentUpon>Dashbaord.cs</DependentUpon>
-    </Compile>
-<<<<<<< HEAD
-=======
-    <Compile Include="Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
->>>>>>> origin/Sprint2_Daasha
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MessageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MessageForm.Designer.cs">
-      <DependentUpon>MessageForm.cs</DependentUpon>
-    </Compile>
+
+    <!-- Checkout -->
+    <Compile Include="Checkout.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Checkout.Designer.cs"><DependentUpon>Checkout.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="Checkout.resx"><DependentUpon>Checkout.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Clothing -->
+    <Compile Include="Clothing.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Clothing.Designer.cs"><DependentUpon>Clothing.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="Clothing.resx"><DependentUpon>Clothing.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Footwear -->
+    <Compile Include="footwear.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="footwear.Designer.cs"><DependentUpon>footwear.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="footwear.resx"><DependentUpon>footwear.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Dashboard -->
+    <Compile Include="Dashbaord.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Dashbaord.Designer.cs"><DependentUpon>Dashbaord.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="Dashbaord.resx"><DependentUpon>Dashbaord.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Login -->
+    <Compile Include="Login.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Login.Designer.cs"><DependentUpon>Login.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="Login.resx"><DependentUpon>Login.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Register -->
+    <Compile Include="Register.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Register.Designer.cs"><DependentUpon>Register.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="Register.resx"><DependentUpon>Register.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Snacks -->
+    <Compile Include="snacks.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="snacks.Designer.cs"><DependentUpon>snacks.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="snacks.resx"><DependentUpon>snacks.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Stationary -->
+    <Compile Include="Stationary.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Stationary.Designer.cs"><DependentUpon>Stationary.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="Stationary.resx"><DependentUpon>Stationary.cs</DependentUpon></EmbeddedResource>
+
+    <!-- MessageForm -->
+    <Compile Include="MessageForm.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="MessageForm.Designer.cs"><DependentUpon>MessageForm.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="MessageForm.resx"><DependentUpon>MessageForm.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Viren -->
+    <Compile Include="Viren.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Viren.Designer.cs"><DependentUpon>Viren.cs</DependentUpon></Compile>
+    <EmbeddedResource Include="Viren.resx"><DependentUpon>Viren.cs</DependentUpon></EmbeddedResource>
+
+    <!-- Form2 -->
+    <Compile Include="Form2.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Form2.Designer.cs"><DependentUpon>Form2.cs</DependentUpon></Compile>
+
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="snacks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="snacks.Designer.cs">
-      <DependentUpon>snacks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Stationary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stationary.Designer.cs">
-      <DependentUpon>Stationary.cs</DependentUpon>
-    </Compile>
     <Compile Include="StoreData.cs" />
-    <Compile Include="Viren.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Viren.Designer.cs">
-      <DependentUpon>Viren.cs</DependentUpon>
-    </Compile>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Checkout.resx">
-      <DependentUpon>Checkout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Clothing.resx">
-      <DependentUpon>Clothing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="footwear.resx">
-      <DependentUpon>footwear.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashbaord.resx">
-      <DependentUpon>Dashbaord.cs</DependentUpon>
-    </EmbeddedResource>
-=======
->>>>>>> origin/Sprint2_Daasha
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MessageForm.resx">
-      <DependentUpon>MessageForm.cs</DependentUpon>
-    </EmbeddedResource>
+
+    <!-- Properties -->
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -163,18 +120,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="snacks.resx">
-      <DependentUpon>snacks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stationary.resx">
-      <DependentUpon>Stationary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Viren.resx">
-      <DependentUpon>Viren.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -185,26 +130,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+
+  <!-- Resource images -->
   <ItemGroup>
     <None Include="Resources\431d5052-3e89-4ee4-a499-377843fdc7bd-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\4914210-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\6904a3d0-5543-4c3b-bd6c-8aa126789849.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\a6820668-f08f-4b89-a7a8-5b418f8da5ba.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Blue and Orange Modern Login and Sign-up Website Page UI Desktop Prototype %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2361d035-83b2-4cf2-9ce0-4196b063b03b.png" />
   </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
