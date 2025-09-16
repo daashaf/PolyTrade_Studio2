@@ -47,5 +47,20 @@ namespace PolyTrade_WebApp
             Dashbaord dashboard = new Dashbaord();
             dashboard.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var cart = Application.OpenForms.OfType<Viren>().FirstOrDefault();
+            if (cart == null || cart.IsDisposed)
+                cart = new Viren();
+
+            cart.StartPosition = FormStartPosition.CenterScreen;
+
+            // If you want to come back to Footwear after closing Viren:
+            cart.FormClosed += (s, args) => this.Show();
+
+            cart.Show();     // use ShowDialog(this) if you prefer modal
+            this.Hide();
+        }
     }
 }

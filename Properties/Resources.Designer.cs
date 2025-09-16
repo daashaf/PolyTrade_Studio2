@@ -75,7 +75,7 @@ namespace PolyTrade_WebApp.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _2361d035_83b2_4cf2_9ce0_4196b063b03b {
             get {
-                object obj = ResourceManager.GetObject("_2361d035_83b2_4cf2_9ce0_4196b063b03b", resourceCulture);
+                object obj = ResourceManager.GetObject("2361d035-83b2-4cf2-9ce0-4196b063b03b", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace PolyTrade_WebApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _431d5052_3e89_4ee4_a499_377843fdc7bd_removebg_preview {
+        internal static System.Drawing.Bitmap _4914210_removebg_preview {
             get {
-                object obj = ResourceManager.GetObject("_431d5052_3e89_4ee4_a499_377843fdc7bd_removebg_preview", resourceCulture);
+                object obj = ResourceManager.GetObject("4914210_removebg_preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace PolyTrade_WebApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4914210_removebg_preview {
+        internal static System.Drawing.Bitmap _66 {
             get {
-                object obj = ResourceManager.GetObject("_4914210_removebg_preview", resourceCulture);
+                object obj = ResourceManager.GetObject("66", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,16 +293,6 @@ namespace PolyTrade_WebApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MessageBox {
-            get {
-                object obj = ResourceManager.GetObject("MessageBox", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap muffin {
             get {
                 object obj = ResourceManager.GetObject("muffin", resourceCulture);
@@ -326,16 +316,6 @@ namespace PolyTrade_WebApp.Properties {
         internal static System.Drawing.Bitmap PROFILE_ICON_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("PROFILE_ICON-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Reg {
-            get {
-                object obj = ResourceManager.GetObject("Reg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -167,7 +167,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PolyTrade_WebApp.Properties.Resources._431d5052_3e89_4ee4_a499_377843fdc7bd_removebg_preview;
+            this.pictureBox1.Image = global::PolyTrade_WebApp.Properties.Resources._4914210_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(164, 69);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 151);

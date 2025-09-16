@@ -132,5 +132,12 @@ namespace PolyTrade_WebApp
                 e.Graphics.DrawLine(pen, 10, y, panel1.Width - 10, y);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Dashbaord dash = new Dashbaord();
+            dash.Show();
+            this.Hide();
+        }
     }
 }

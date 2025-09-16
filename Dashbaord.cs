@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PolyTrade_WebApp
@@ -42,13 +43,28 @@ namespace PolyTrade_WebApp
         // Logout
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Logged out successfully",
+            var confirm = MessageBox.Show(
+                "Log out and return to the Login page?",
                 "Log Out",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
             );
+            if (confirm != DialogResult.Yes) return;
+
+            // Find an existing Login form, or create one
+            var login = Application.OpenForms.OfType<Login>().FirstOrDefault();
+            if (login == null || login.IsDisposed)
+                login = new Login();            // Ensure your Login class is public and in the same namespace
+
+            login.StartPosition = FormStartPosition.CenterScreen;
+
+            // When Login closes, close this Dashboard too (clean exit)
+            login.FormClosed += (s, args) => this.Close();
+
+            login.Show();
+            this.Hide(); // Hide Dashboard so the app doesn't exit if it's the main form
         }
+
 
         private void Dashbaord_Load(object sender, EventArgs e)
         {

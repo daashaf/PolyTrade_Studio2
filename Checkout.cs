@@ -46,9 +46,19 @@ namespace PolyTrade_WebApp
                 MessageBoxIcon.Information
             );
 
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             Dashbaord dash = new Dashbaord();
             dash.Show();
             this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

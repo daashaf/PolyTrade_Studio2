@@ -58,6 +58,7 @@ namespace PolyTrade_WebApp
             this.button5.TabIndex = 42;
             this.button5.Text = "LOGOUT";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox6
             // 
@@ -74,17 +75,16 @@ namespace PolyTrade_WebApp
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(500, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 72);
+            this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 42;
             this.label1.Text = "CHECKOUT";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PolyTrade_WebApp.Properties.Resources.MessageBox;
+            this.pictureBox1.Image = global::PolyTrade_WebApp.Properties.Resources._66;
             this.pictureBox1.Location = new System.Drawing.Point(325, 87);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(720, 584);
@@ -104,6 +104,7 @@ namespace PolyTrade_WebApp
             this.button2.TabIndex = 40;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
